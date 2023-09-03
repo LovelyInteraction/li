@@ -31,6 +31,28 @@ struct MainView: View {
                 .cornerRadius(15)
                 .padding()
                 
+                if let weather = locationManager.weather {
+                    HStack{
+                        Text("\(weather.currentWeather.temperature.formatted())")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                    .padding(.leading)
+
+                    HStack{
+                        Text("최고 \(weather.dailyForecast[0].highTemperature.formatted()) | 최저 \(weather.dailyForecast[0].lowTemperature.formatted())")
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                    .padding(.leading)
+
+
+                    
+
+                }
                 header
             }
         }
