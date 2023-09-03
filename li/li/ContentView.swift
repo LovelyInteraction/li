@@ -13,7 +13,7 @@ struct ContentView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
     
     var body: some View {
-        MainView()
+        MainView(isFirstLaunching: $isFirstLaunching)
             // 앱 최초 구동 시 전체화면으로 IntroView 띄우기
             .fullScreenCover(isPresented: $isFirstLaunching) {
                 IntroView(isFirstLaunching: $isFirstLaunching)

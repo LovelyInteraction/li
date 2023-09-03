@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AccessView: View {
+//    @StateObject private var locationManager = LocationManager()
     @Binding var isFirstLaunching: Bool
     
     var body: some View {
@@ -35,6 +36,7 @@ extension AccessView {
         Button{
             print("AccessView: 다음버튼 클릭")
             isFirstLaunching.toggle()
+//            locationManager.locationManager.requestAlwaysAuthorization()
         } label: {
             Text("다음")
                 .font(.headline)
