@@ -16,7 +16,7 @@ struct MainView: View {
         ZStack{
             Color.blue
                 .ignoresSafeArea()
-            VStack{
+            ScrollView{
                 HStack{
                     Image(systemName: "location.fill")
                         
@@ -50,10 +50,19 @@ struct MainView: View {
                     .padding(.leading)
 
 
-                    
+                    // 10일후까지의 예보 뷰
+                    SevenDayForecastView(dayWeatherList: weather.dailyForecast.forecast)
 
                 }
                 header
+            }
+//            .opacity(opacity)
+            .onAppear {
+                let appearance = UIScrollView.appearance()
+                appearance.isPagingEnabled = true
+                appearance.showsVerticalScrollIndicator = false
+                appearance.showsHorizontalScrollIndicator = false
+
             }
         }
         .task(id: isFirstLaunching) {
@@ -89,6 +98,31 @@ struct MainView: View {
 extension MainView{
     private var header: some View {
         Text("MainView")
+    }
+    
+    private var tenDayForecastView: some View {
+        VStack(alignment: .leading) {
+            Text("10-day forecast")
+                .font(.caption)
+                .opacity(0.5)
+            if let weather = locationManager.weather {
+                List(weather.dailyForecast.forecast, id: \.date) { dailyWeather in
+                    HStack {
+                        Text(dailyWeather.date.formatAsAbbreviatedDay())
+                            .frame(maxWidth: 50, alignment: .leading)
+                        Image(systemName: "\(dailyWeather.symbolName).fill")
+                            .foregroundColor(.yellow)
+                        Text(dailyWeather.lowTemperature.formatted())
+                            .frame(maxWidth: .infinity)
+                        Text(dailyWeather.highTemperature.formatted())
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        
+                    }.listRowBackground(Color.blue)
+                    
+                }.listStyle(.plain)
+
+            }
+        }
     }
 }
 
