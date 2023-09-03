@@ -51,3 +51,18 @@ extension LocationManager: CLLocationManagerDelegate {
         }
     }
 }
+
+// MARK: - 날짜 표시 방법 변경(ex. Sunday -> Sun)
+extension Date {
+    func formatAsAbbreviatedDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: self)
+    }
+    
+    func formatAsAbbreviatedTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "ha"
+        return formatter.string(from: self)
+    }
+}
