@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct IntroView: View {
+    @Binding var isFirstLaunching: Bool
+    
     var body: some View {
-        VStack{
-            Spacer()
-            header
-            Spacer()
-            Spacer()
-            Spacer()
-            startButton
+        NavigationView {
+            VStack {
+                Spacer()
+                header
+                Spacer()
+                Spacer()
+                Spacer()
+                startButton
+            }
         }
     }
 }
@@ -30,9 +34,7 @@ extension IntroView {
     }
     
     private var startButton: some View {
-        Button{
-            print("IntroView: 시작하기버튼 클릭")
-        } label: {
+        NavigationLink(destination: AccessView(isFirstLaunching: $isFirstLaunching)) {
             Text("시작하기")
                 .font(.headline)
                 .padding()
@@ -47,6 +49,6 @@ extension IntroView {
 
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView()
+        IntroView(isFirstLaunching: .constant(true))
     }
 }

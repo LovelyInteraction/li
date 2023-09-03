@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AccessView: View {
+    @Binding var isFirstLaunching: Bool
+    
     var body: some View {
         VStack{
             Spacer()
@@ -16,7 +18,7 @@ struct AccessView: View {
             Spacer()
             Spacer()
             nextButton
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 
@@ -32,6 +34,7 @@ extension AccessView {
     private var nextButton: some View {
         Button{
             print("AccessView: 다음버튼 클릭")
+            isFirstLaunching.toggle()
         } label: {
             Text("다음")
                 .font(.headline)
@@ -47,6 +50,6 @@ extension AccessView {
 
 struct AccessView_Previews: PreviewProvider {
     static var previews: some View {
-        AccessView()
+        AccessView(isFirstLaunching: .constant(true))
     }
 }
