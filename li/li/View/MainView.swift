@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
+    @Binding var isFirstLaunching: Bool
+    @StateObject private var locationManager = LocationManager()
+    
     var body: some View {
         header
+            .task(id: isFirstLaunching) {
+                if !isFirstLaunching {
+                    locationManager.locationManager.requestAlwaysAuthorization()
+                }
+            }
     }
 }
 
@@ -21,6 +29,6 @@ extension MainView{
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(isFirstLaunching: .constant(true))
     }
 }
