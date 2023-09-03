@@ -1,5 +1,5 @@
 //
-//  IntroView.swift
+//  AccessView.swift
 //  li
 //
 //  Created by 박승찬 on 2023/09/03.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IntroView: View {
+struct AccessView: View {
     var body: some View {
         VStack{
             Spacer()
@@ -15,25 +15,25 @@ struct IntroView: View {
             Spacer()
             Spacer()
             Spacer()
-            startButton
+            nextButton
         }
     }
 }
 
-extension IntroView {
+extension AccessView {
     private var header: some View {
-        Text("환영해요\n어찌구\n날씨앱 어찌구에요.")
+        Text("권한 어찌구\n주세요 ㅋㅋ")
             .font(.system(size: 32))
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
             .padding()
     }
     
-    private var startButton: some View {
+    private var nextButton: some View {
         Button{
-            print("IntroView: 시작하기버튼 클릭")
+            print("AccessView: 다음버튼 클릭")
         } label: {
-            Text("시작하기")
+            Text("다음")
                 .font(.headline)
                 .padding()
                 .foregroundColor(.black)
@@ -45,8 +45,8 @@ extension IntroView {
     }
 }
 
-struct IntroView_Previews: PreviewProvider {
+struct AccessView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView()
+        AccessView()
     }
 }
