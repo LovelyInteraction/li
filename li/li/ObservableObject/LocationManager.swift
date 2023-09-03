@@ -7,12 +7,29 @@
 
 import Foundation
 import CoreLocation
+import WeatherKit
 
 // MARK: - 현재위치 설정하기
 class LocationManager: NSObject, ObservableObject {
     
+    let weatherService = WeatherService.shared
+    
+    @Published var weather: Weather?
+    @Published var locationName: String = ""
+    
     @Published var currentLocation: CLLocation?
     let locationManager = CLLocationManager()
+    
+    // 시간별 데이터를 가져올 때 현재 시간보다 24시간 뒤까지만 가져오도록 하기 위한 코드
+    var hourlyWeatherData: [HourWeather] {
+        if let weather {
+            return Array(weather.hourlyForecast.filter{ hourlyWeather in
+                return hourlyWeather.date.timeIntervalSince(Date()) >= 0
+            }.prefix(24))
+        } else {
+            return []
+        }
+    }
     
     override init() {
         super.init()
