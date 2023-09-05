@@ -16,6 +16,7 @@
 		6F2501572AA079EA00DA8E8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2501562AA079EA00DA8E8F /* ContentView.swift */; };
 		6F2501592AA079EB00DA8E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2501582AA079EB00DA8E8F /* Assets.xcassets */; };
 		6F25015C2AA079EB00DA8E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F25015B2AA079EB00DA8E8F /* Preview Assets.xcassets */; };
+		6F84329B2AA77115000760AC /* HourlyForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F84329A2AA77115000760AC /* HourlyForcastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6F2501582AA079EB00DA8E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F25015B2AA079EB00DA8E8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F2501622AA0861700DA8E8F /* li.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = li.entitlements; sourceTree = "<group>"; };
+		6F84329A2AA77115000760AC /* HourlyForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForcastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 				6F1762D12AA47B7B009D0040 /* AccessView.swift */,
 				6F1762D32AA47D00009D0040 /* MainView.swift */,
 				6F1762DA2AA4F0FD009D0040 /* SevenDayForecastView.swift */,
+				6F84329A2AA77115000760AC /* HourlyForcastView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				6F1762D22AA47B7B009D0040 /* AccessView.swift in Sources */,
 				6F2501572AA079EA00DA8E8F /* ContentView.swift in Sources */,
+				6F84329B2AA77115000760AC /* HourlyForcastView.swift in Sources */,
 				6F1762D92AA48598009D0040 /* LocationManager.swift in Sources */,
 				6F1762DB2AA4F0FD009D0040 /* SevenDayForecastView.swift in Sources */,
 				6F1762D42AA47D00009D0040 /* MainView.swift in Sources */,

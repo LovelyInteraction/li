@@ -54,6 +54,10 @@ struct MainView: View {
                             Image("testImage")
                                 .resizable()
                                 .scaledToFit()
+                                .frame(width: 260, height: 350)
+                                .padding(.bottom)
+                            
+                            HourlyForcastView(hourWeatherList: locationManager.hourlyWeatherData)
                         }
                     }
                     .frame(width: proxy.size.width, height: proxy.size.height)
@@ -110,31 +114,6 @@ struct MainView: View {
 extension MainView{
     private var header: some View {
         Text("MainView")
-    }
-    
-    private var tenDayForecastView: some View {
-        VStack(alignment: .leading) {
-            Text("10-day forecast")
-                .font(.caption)
-                .opacity(0.5)
-            if let weather = locationManager.weather {
-                List(weather.dailyForecast.forecast, id: \.date) { dailyWeather in
-                    HStack {
-                        Text(dailyWeather.date.formatAsAbbreviatedDay())
-                            .frame(maxWidth: 50, alignment: .leading)
-                        Image(systemName: "\(dailyWeather.symbolName).fill")
-                            .foregroundColor(.yellow)
-                        Text(dailyWeather.lowTemperature.formatted())
-                            .frame(maxWidth: .infinity)
-                        Text(dailyWeather.highTemperature.formatted())
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                        
-                    }.listRowBackground(Color.blue)
-                    
-                }.listStyle(.plain)
-
-            }
-        }
     }
 }
 
