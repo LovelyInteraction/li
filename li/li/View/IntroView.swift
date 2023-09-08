@@ -15,9 +15,7 @@ struct IntroView: View {
             VStack {
                 Spacer()
                 header
-                Spacer()
-                Spacer()
-                Spacer()
+                mainImage
                 startButton
             }
         }
@@ -26,7 +24,7 @@ struct IntroView: View {
 
 extension IntroView {
     private var header: some View {
-        Text("환영해요\n어찌구\n날씨앱 어찌구에요.")
+        Text("어서와요~\n두두튀에요^^")
             .font(.system(size: 32))
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
@@ -35,15 +33,34 @@ extension IntroView {
     
     private var startButton: some View {
         NavigationLink(destination: AccessView(isFirstLaunching: $isFirstLaunching)) {
-            Text("시작하기")
-                .font(.headline)
-                .padding()
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity)
-                .background(Color.gray)
-                .cornerRadius(15)
+            ZStack{
+                Image("underLine")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 232)
+                    .offset(y:10)
+                Text("날씨 보러 ㄱㄱ")
+                    .font(.system(size: 24))
+                    .bold()
+                    .padding()
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
+                    .background(content: {
+                        RoundedRectangle(cornerRadius: 15)
+                            .strokeBorder(.black, lineWidth: 3)
+                            .frame(maxWidth: .infinity)
+
+                    })
+            }
         }
-        .padding()
+        .padding(23)
+    }
+    private var mainImage: some View {
+        ZStack{
+            Image("IntroView_Img1")
+            Image("IntroView_Img2")
+                .offset(y:80)
+        }.offset(y:150)
     }
 }
 

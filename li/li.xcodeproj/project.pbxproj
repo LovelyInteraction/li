@@ -51,8 +51,7 @@
 				6F1762CE2AA473A2009D0040 /* IntroView.swift */,
 				6F1762D12AA47B7B009D0040 /* AccessView.swift */,
 				6F1762D32AA47D00009D0040 /* MainView.swift */,
-				6F1762DA2AA4F0FD009D0040 /* SevenDayForecastView.swift */,
-				6F84329A2AA77115000760AC /* HourlyForcastView.swift */,
+				6F9A64232AAB430100E3D442 /* DetailView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +100,15 @@
 				6F25015B2AA079EB00DA8E8F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F9A64232AAB430100E3D442 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				6F1762DA2AA4F0FD009D0040 /* SevenDayForecastView.swift */,
+				6F84329A2AA77115000760AC /* HourlyForcastView.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
