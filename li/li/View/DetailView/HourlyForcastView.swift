@@ -20,10 +20,9 @@ struct HourlyForcastView: View {
         VStack{
             Text("\(time)")
                 .font(.headline)
-                .foregroundColor(.white)
                 .padding(.vertical,5)
                 .padding(.horizontal)
-                .background(Color.black)
+                .background(Color("Kiwi"))
                 .cornerRadius(30)
             //63
             ScrollView(.horizontal) {
@@ -41,9 +40,27 @@ struct HourlyForcastView: View {
                                 print("Offset: \(num)")
                             }
                         )
+                    
+                    //시작과 마지막을 중앙으로 하기 위한 뷰들
+                    ForEach(0...2, id: \.self) { _ in
+                        Image(systemName: "\(hourWeatherList[0].symbolName).fill")
+                            .foregroundColor(.white)
+                            .padding(10)
+                    }
                     ForEach(hourWeatherList, id: \.date) { hourWeatherItem in
-                        Image(systemName: "\(hourWeatherItem.symbolName).fill")
-                            .padding(15)
+                        VStack{
+                            Image("MainView_Hourly_Line")
+                                .offset(x: 22)
+                            Spacer()
+                            Image(systemName: "\(hourWeatherItem.symbolName).fill")
+                                .padding(.horizontal,15)
+                        }
+                    }
+                    //시작과 마지막을 중앙으로 하기 위한 뷰들
+                    ForEach(0...2, id: \.self) { _ in
+                        Image(systemName: "\(hourWeatherList[0].symbolName).fill")
+                            .foregroundColor(.white)
+                            .padding(12)
                     }
                 }.padding()
             }
@@ -56,6 +73,9 @@ struct HourlyForcastView: View {
                 let components = calendar.dateComponents([.hour, .minute, .second], from: hourWeatherList[0].date)
                 if let now = components.hour {
                     time = String(now - num) + ":00"
+                    if num == 0{
+                        time = "NOW"
+                    }
                 }
             }
         }

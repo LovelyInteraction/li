@@ -14,7 +14,7 @@ struct SevenDayForecastView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("10-day forecast")
+            Text("일주일 날씨")
                 .font(.caption)
                 .opacity(0.5)
             
@@ -22,10 +22,10 @@ struct SevenDayForecastView: View {
                 HStack {
                     Text(dailyWeather.date.formatAsAbbreviatedDay())
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Image(systemName: "\(dailyWeather.symbolName).fill")
-                        .foregroundColor(.white)
+                    Image(systemName: "\(dailyWeather.symbolName)")
+                        .foregroundColor(.black)
                     Text("\(dailyWeather.condition.description)")
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(maxWidth: 70, alignment: .center)
                     Text(dailyWeather.highTemperature.formatted())
                         .frame(maxWidth: 40, alignment: .trailing)
@@ -38,7 +38,7 @@ struct SevenDayForecastView: View {
             }
         }
         .padding()
-        .foregroundColor(.white)
+//        .foregroundColor(.white)
     }
 }
 
