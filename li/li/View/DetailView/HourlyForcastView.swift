@@ -38,6 +38,9 @@ struct HourlyForcastView: View {
                                 print("Offset: \(scrollOffset)")
                                 self.num = Int((scrollOffset - 16)/60)
                                 print("Offset: \(num)")
+                                if Int(scrollOffset - 16) % 12 == 0 {
+                                    HapticManager.instance.impact(style: .light)
+                                }
                             }
                         )
                     
@@ -76,6 +79,7 @@ struct HourlyForcastView: View {
                     if num == 0{
                         time = "NOW"
                     }
+                    HapticManager.instance.impact(style: .medium)
                 }
             }
         }
