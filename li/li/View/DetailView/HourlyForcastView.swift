@@ -17,13 +17,18 @@ struct HourlyForcastView: View {
     let hourWeatherList: [HourWeather]
     
     var body: some View {
-        VStack{
+        ScrollViewReader { proxy in
             Text("\(time)")
                 .font(.headline)
                 .padding(.vertical,5)
                 .padding(.horizontal)
                 .background(Color("Kiwi"))
                 .cornerRadius(30)
+                .onTapGesture {
+                    withAnimation {
+                        proxy.scrollTo(0,anchor: .trailing)
+                    }
+                }
             //63
             ScrollView(.horizontal) {
                 HStack {
@@ -45,10 +50,11 @@ struct HourlyForcastView: View {
                         )
                     
                     //시작과 마지막을 중앙으로 하기 위한 뷰들
-                    ForEach(0...2, id: \.self) { _ in
+                    ForEach(0...2, id: \.self) { index in
                         Image(systemName: "\(hourWeatherList[0].symbolName).fill")
                             .foregroundColor(.white)
                             .padding(10)
+                            .id(index)
                     }
                     ForEach(hourWeatherList, id: \.date) { hourWeatherItem in
                         VStack{
