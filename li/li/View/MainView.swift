@@ -41,6 +41,7 @@ struct MainView: View {
                             .padding(.bottom)
                         
                         HourlyForcastView(hourWeatherList: locationManager.hourlyWeatherData)
+                            .frame(height: 120)
                         
                         slideUpText
                     } else {
