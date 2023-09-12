@@ -28,16 +28,24 @@ struct AccessView: View {
 extension AccessView {
     private var header: some View {
         VStack{
-            Text("권한 어찌구\n주세요 ㅋㅋ")
-                .font(.system(size: 32))
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
-                .padding()
+            ZStack{
+                Image("AccessView_LineKiwi")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250)
+                    .offset(y:33)
+                Text("당신이 있는 곳,\n올바른 날시를 위해")
+                    .font(.system(size: 32))
+                    .fontWeight(.bold)
+                    .lineSpacing(7)
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
             Text("날씨 정보 제공을 위해서\n위치와 사용자 추적 데이터가 필요해요")
                 .font(.system(size: 16))
-                .lineSpacing(8)
+                .lineSpacing(6)
                 .foregroundColor(.secondary)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 
         }
@@ -48,34 +56,27 @@ extension AccessView {
             print("AccessView: 다음버튼 클릭")
             isFirstLaunching.toggle()
         } label: {
-            ZStack{
-                Image("underLine")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 232)
-                    .offset(y:10)
-                Text("권한 요청하기")
-                    .font(.system(size: 24))
-                    .bold()
-                    .padding()
-                    .foregroundColor(.black)
-                    .frame(maxWidth: .infinity)
-                    .background(content: {
-                        RoundedRectangle(cornerRadius: 15)
-                            .strokeBorder(.black, lineWidth: 3)
-                            .frame(maxWidth: .infinity)
-
-                    })
-                    .cornerRadius(15)
-            }
+            Text("권한 요청하기")
+                .font(.system(size: 24))
+                .bold()
+                .padding()
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 70)
+                .background(.black)
+                .cornerRadius(15)
+            
         }
         .padding()
     }
     
     private var mainImage: some View {
-        ZStack{
-            Image("AccessView_Img1")
-        }
+        Image("AccessView_Img1")
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .padding(30)
+        
     }
 }
 
