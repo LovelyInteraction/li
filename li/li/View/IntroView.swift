@@ -15,7 +15,11 @@ struct IntroView: View {
             VStack {
                 Spacer()
                 header
+                Spacer()
+                Spacer()
                 mainImage
+                Spacer()
+                Spacer()
                 startButton
             }
         }
@@ -24,43 +28,42 @@ struct IntroView: View {
 
 extension IntroView {
     private var header: some View {
-        Text("어서와요~\n두두튀에요^^")
-            .font(.system(size: 32))
-            .fontWeight(.semibold)
-            .multilineTextAlignment(.center)
-            .padding()
+        ZStack{
+            Image("AccessView_LineKiwi")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 280)
+                .offset(y:33)
+            Text("반가워요\n날씨를 확인해볼까요?")
+                .font(.system(size: 32))
+                .fontWeight(.bold)
+                .lineSpacing(7)
+                .multilineTextAlignment(.center)
+                .padding()
+        }
     }
     
     private var startButton: some View {
         NavigationLink(destination: AccessView(isFirstLaunching: $isFirstLaunching)) {
-            ZStack{
-                Image("underLine")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 232)
-                    .offset(y:10)
-                Text("날씨 보러 ㄱㄱ")
+                Text("시작하기")
                     .font(.system(size: 24))
                     .bold()
                     .padding()
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .background(content: {
-                        RoundedRectangle(cornerRadius: 15)
-                            .strokeBorder(.black, lineWidth: 3)
-                            .frame(maxWidth: .infinity)
-
-                    })
-            }
+                    .frame(height: 70)
+                    .background(.black)
+                    .cornerRadius(15)
         }
-        .padding(23)
+        .padding()
     }
     private var mainImage: some View {
-        ZStack{
-            Image("IntroView_Img1")
-            Image("IntroView_Img2")
-                .offset(y:80)
-        }.offset(y:150)
+        Image("IntroView_MainImage")
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .padding(-40)
+            
     }
 }
 
