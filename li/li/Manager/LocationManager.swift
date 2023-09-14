@@ -68,7 +68,8 @@ extension LocationManager: CLLocationManagerDelegate {
 extension Date {
     func formatAsAbbreviatedDay() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
+        formatter.dateFormat = "E"
+        formatter.locale = Locale(identifier: "ko")
         return formatter.string(from: self)
     }
     
