@@ -31,6 +31,18 @@ class LocationManager: NSObject, ObservableObject {
         }
     }
     
+    // 날짜별 데이터를 가져올 때 현재 날짜보다 7일 뒤까지만 가져오도록 하기 위한 코드
+    var dailyWeatherData: [DayWeather] {
+        if let weather {
+            return Array(weather.dailyForecast.filter{ dailyWeather in
+                return dailyWeather.date.timeIntervalSince(Date()) >= 0
+                
+            }.prefix(7))
+        }else {
+            return []
+        }
+    }
+    
     override init() {
         super.init()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

@@ -76,7 +76,7 @@ struct MainView: View {
                 
                 if let weather = locationManager.weather {
                     // 10일후까지의 예보 뷰
-                    SevenDayForecastView(dayWeatherList: weather.dailyForecast.forecast)
+                    SevenDayForecastView(dayWeatherList: locationManager.dailyWeatherData)
                         .frame(width: proxy.size.width, height: proxy.size.height)
 
                 }
