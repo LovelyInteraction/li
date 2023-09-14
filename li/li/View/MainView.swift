@@ -34,7 +34,7 @@ struct MainView: View {
                         }
                         .padding(.leading)
                         
-                        Image("MainTest")
+                        Image("IntroView_MainImage")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 393, height: 352)
@@ -61,7 +61,7 @@ struct MainView: View {
                         }
                         .padding(.leading)
                         
-                        Image("MainTest")
+                        Image("IntroView_MainImage")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 393, height: 352)
