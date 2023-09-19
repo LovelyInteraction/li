@@ -18,9 +18,9 @@ extension Font {
         var value: String {
             switch self {
             case .sf_Pro:
-                return "SF-Pro-semiBold"
+                return "SFPro-SemiBold"
             case .sf_Mono:
-                return "SF-Mono-Bold"
+                return "SFMono-Bold"
             case .apple_SD_Gothic_Neo:
                 return "AppleSDGothicNeo-Bold"
             }
