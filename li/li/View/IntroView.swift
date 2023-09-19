@@ -35,25 +35,20 @@ extension IntroView {
                 .frame(width: 280)
                 .offset(y:33)
             Text("반가워요\n날씨를 확인해볼까요?")
-                .font(.system(size: 32))
-                .fontWeight(.bold)
-                .lineSpacing(7)
-                .multilineTextAlignment(.center)
-                .padding()
+                .titleFont2()
         }
     }
     
     private var startButton: some View {
         NavigationLink(destination: AccessView(isFirstLaunching: $isFirstLaunching)) {
-                Text("시작하기")
-                    .font(.system(size: 24))
-                    .bold()
-                    .padding()
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 70)
-                    .background(.black)
-                    .cornerRadius(15)
+            Text("시작하기")
+                .titleFont3()
+                .padding()
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 70)
+                .background(.black)
+                .cornerRadius(15)
         }
         .padding()
     }

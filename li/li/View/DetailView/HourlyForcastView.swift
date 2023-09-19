@@ -23,10 +23,10 @@ struct HourlyForcastView: View {
     var body: some View {
         ScrollViewReader { proxy in
             Text("\(time)")
-                .font(.headline)
+                .timeFont()
                 .padding(.vertical,5)
                 .padding(.horizontal)
-                .background(Color("Kiwi"))
+                .background(Color("accentKiwi"))
                 .cornerRadius(30)
                 .onTapGesture {
                     withAnimation {
@@ -156,11 +156,11 @@ struct HourlyForcastView: View {
     }
 }
 
-struct HourlyForcastView_Previews: PreviewProvider {
-    static var previews: some View {
-        HourlyForcastView(hourWeatherList: [])
-    }
-}
+//struct HourlyForcastView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HourlyForcastView(hourWeatherList: [])
+//    }
+//}
 
 struct OffsetPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0

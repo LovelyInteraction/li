@@ -20,16 +20,15 @@ struct MainView: View {
                     if let weather = locationManager.weather {
                         HStack{
                             Text("\(weather.currentWeather.temperature.formatted())")
-                                .font(.largeTitle)
-                                .fontWeight(.semibold)
+                                .titleFont1()
                             Spacer()
                         }
                         .padding(.leading)
                         
                         HStack{
                             Text("최고 \(weather.dailyForecast[0].highTemperature.formatted()) | 최저 \(weather.dailyForecast[0].lowTemperature.formatted())")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
+                                .subTextFont()
+                                .foregroundColor(Color("subGray"))
                             Spacer()
                         }
                         .padding(.leading)
@@ -47,16 +46,15 @@ struct MainView: View {
                     } else {
                         HStack{
                             Text("- C")
-                                .font(.largeTitle)
-                                .fontWeight(.semibold)
+                                .titleFont1()
                             Spacer()
                         }
                         .padding(.leading)
                         
                         HStack{
                             Text("최고 - C | 최저 - C")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
+                                .subTextFont()
+                                .foregroundColor(Color("subGray"))
                             Spacer()
                         }
                         .padding(.leading)
@@ -125,7 +123,7 @@ extension MainView{
             Image(systemName: "location.fill")
                 
             Text("\(locationManager.locationName)")
-                .font(.headline)
+                .titleFont3()
             Spacer()
             Image(systemName: "chevron.down")
         }
@@ -144,11 +142,12 @@ extension MainView{
     private var slideUpText: some View {
         VStack{
             Text("위로 올려 일주일 날씨를 확인해요")
-                .font(.subheadline)
-                .fontWeight(.semibold)
+                .calloutFont()
+                .foregroundColor(Color("subGray"))
                 .padding()
                 
             Image(systemName: "chevron.compact.up")
+                .foregroundColor(Color("subGray"))
         }
     }
 }
