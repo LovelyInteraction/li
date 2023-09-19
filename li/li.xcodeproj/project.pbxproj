@@ -18,6 +18,8 @@
 		6F2501592AA079EB00DA8E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2501582AA079EB00DA8E8F /* Assets.xcassets */; };
 		6F25015C2AA079EB00DA8E8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F25015B2AA079EB00DA8E8F /* Preview Assets.xcassets */; };
 		6F84329B2AA77115000760AC /* HourlyForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F84329A2AA77115000760AC /* HourlyForcastView.swift */; };
+		6FB2E3D82AB9D8B200884499 /* SF-Mono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E3D72AB9D8B200884499 /* SF-Mono-Bold.otf */; };
+		6FB2E3DA2AB9D9A600884499 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		6F25015B2AA079EB00DA8E8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F2501622AA0861700DA8E8F /* li.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = li.entitlements; sourceTree = "<group>"; };
 		6F84329A2AA77115000760AC /* HourlyForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForcastView.swift; sourceTree = "<group>"; };
+		6FB2E3D72AB9D8B200884499 /* SF-Mono-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Bold.otf"; sourceTree = "<group>"; };
+		6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			children = (
 				6F1762D72AA48579009D0040 /* Manager */,
 				6F1762D02AA473AB009D0040 /* View */,
+				6FB2E3D62AB9D63D00884499 /* Resource */,
 				6F2501622AA0861700DA8E8F /* li.entitlements */,
 				6F2501542AA079EA00DA8E8F /* liApp.swift */,
 				6F2501562AA079EA00DA8E8F /* ContentView.swift */,
@@ -112,6 +117,15 @@
 				6F84329A2AA77115000760AC /* HourlyForcastView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		6FB2E3D62AB9D63D00884499 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6FB2E3D72AB9D8B200884499 /* SF-Mono-Bold.otf */,
+				6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F25015C2AA079EB00DA8E8F /* Preview Assets.xcassets in Resources */,
+				6FB2E3DA2AB9D9A600884499 /* SF-Pro.ttf in Resources */,
+				6FB2E3D82AB9D8B200884499 /* SF-Mono-Bold.otf in Resources */,
 				6F2501592AA079EB00DA8E8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
