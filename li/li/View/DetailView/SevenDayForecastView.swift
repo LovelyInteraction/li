@@ -17,37 +17,33 @@ struct SevenDayForecastView: View {
             HStack{
                 Image(systemName: "calendar")
                 Text("일주일 날씨")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
+                    .titleFont3()
             }
             Rectangle()
                 .fill(.black)
-                .frame(height: 2)
+                .frame(height: 3)
                 .frame(maxWidth: .infinity)
             
             ForEach(dayWeatherList, id: \.date) { dailyWeather in
 
                 HStack {
                     Text(dailyWeather.date.formatAsAbbreviatedDay())
-                        .font(.system(size: 20))
-                        .bold()
+                        .bodyFont()
                         .frame(maxWidth: 65, alignment: .leading)
                     
                     Image(systemName: dailyWeather.condition == .windy ? "\(dailyWeather.symbolName)" : "\(dailyWeather.symbolName).fill")
                     
                     Text("\(weatherConditionAsKorean(dailyWeather))")
-                        .font(.system(size: 20))
-                        .bold()
+                        .bodyFont()
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Text("\(Int(dailyWeather.highTemperature.value))°")
-                        .font(.system(size: 20))
-                        .bold()
+                        .bodyFont()
                         .frame(maxWidth: 53, alignment: .leading)
                     
                     Text("\(Int(dailyWeather.lowTemperature.value))°")
-                        .font(.system(size: 20))
-                        .bold()
+                        .bodyFont()
+                        .foregroundColor(Color("subGray"))
                         .frame(maxWidth: 52, alignment: .trailing)
                         .opacity(0.5)
                     
@@ -61,7 +57,6 @@ struct SevenDayForecastView: View {
             }
         }
         .padding(23)
-//        .foregroundColor(.white)
     }
 }
 

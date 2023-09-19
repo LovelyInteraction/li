@@ -35,18 +35,12 @@ extension AccessView {
                     .frame(width: 250)
                     .offset(y:33)
                 Text("당신이 있는 곳,\n올바른 날시를 위해")
-                    .font(.system(size: 32))
-                    .fontWeight(.bold)
-                    .lineSpacing(7)
-                    .multilineTextAlignment(.center)
+                    .titleFont2()
                     .padding()
             }
             Text("날씨 정보 제공을 위해서\n위치와 사용자 추적 데이터가 필요해요")
-                .font(.system(size: 16))
-                .lineSpacing(6)
-                .foregroundColor(.secondary)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
+                .subTextFont()
+                .foregroundColor(Color("subGray"))
                 
         }
     }
@@ -57,8 +51,7 @@ extension AccessView {
             isFirstLaunching.toggle()
         } label: {
             Text("권한 요청하기")
-                .font(.system(size: 24))
-                .bold()
+                .titleFont3()
                 .padding()
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)

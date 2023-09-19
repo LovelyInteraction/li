@@ -42,6 +42,7 @@
 		6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		6FB2E3DB2AB9DB4500884499 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		6FB2E3DD2AB9DBD000884499 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		6FB2E3E02AB9E97800884499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 		6F2501532AA079EA00DA8E8F /* li */ = {
 			isa = PBXGroup;
 			children = (
+				6FB2E3E02AB9E97800884499 /* Info.plist */,
 				6F1762D72AA48579009D0040 /* Manager */,
 				6F1762D02AA473AB009D0040 /* View */,
 				6FB2E3D62AB9D63D00884499 /* Resource */,
@@ -357,6 +359,7 @@
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = li/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치사용 어찌구해도 될까요?";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치사용 어찌구해도 될까요?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -389,6 +392,7 @@
 				DEVELOPMENT_TEAM = 37UUYN2CGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = li/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치사용 어찌구해도 될까요?";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치사용 어찌구해도 될까요?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

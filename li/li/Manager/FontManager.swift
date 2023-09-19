@@ -18,11 +18,11 @@ extension Font {
         var value: String {
             switch self {
             case .sf_Pro:
-                return "SF-Pro"
+                return "SF-Pro-semiBold"
             case .sf_Mono:
                 return "SF-Mono-Bold"
             case .apple_SD_Gothic_Neo:
-                return "AppleSDGothicNeo"
+                return "AppleSDGothicNeo-Bold"
             }
         }
     }
@@ -41,19 +41,16 @@ struct FontManager: ViewModifier {
 extension View {
     func titleFont1(fontType: Font.Fonts = .sf_Pro, size: CGFloat = 40.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.semibold)
     }
     
     func titleFont2(fontType: Font.Fonts = .apple_SD_Gothic_Neo, size: CGFloat = 32.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
             .lineSpacing(7)
             .multilineTextAlignment(.center)
     }
     
     func titleFont3(fontType: Font.Fonts = .apple_SD_Gothic_Neo, size: CGFloat = 24.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
             .lineSpacing(8)
             .kerning(0.3)
             .multilineTextAlignment(.center)
@@ -61,26 +58,22 @@ extension View {
     
     func timeFont(fontType: Font.Fonts = .sf_Mono, size: CGFloat = 20.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
             .kerning(-0.5)
             .multilineTextAlignment(.center)
     }
     
     func bodyFont(fontType: Font.Fonts = .apple_SD_Gothic_Neo, size: CGFloat = 20.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
             .multilineTextAlignment(.center)
     }
     
     func subTextFont(fontType: Font.Fonts = .apple_SD_Gothic_Neo, size: CGFloat = 16.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
             .lineSpacing(6)
             .multilineTextAlignment(.center)
     }
     
     func calloutFont(fontType: Font.Fonts = .apple_SD_Gothic_Neo, size: CGFloat = 14.0) -> some View {
         self.modifier(FontManager(fontType: fontType, size: size))
-            .fontWeight(.bold)
     }
 }
