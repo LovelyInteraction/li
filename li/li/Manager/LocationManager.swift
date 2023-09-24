@@ -25,7 +25,7 @@ class LocationManager: NSObject, ObservableObject {
         if let weather {
             return Array(weather.hourlyForecast.filter{ hourlyWeather in
                 return hourlyWeather.date.timeIntervalSince(Date()) >= 0
-            }.prefix(24))
+            }.prefix(25))
         } else {
             return []
         }

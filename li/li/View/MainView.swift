@@ -33,16 +33,9 @@ struct MainView: View {
                         }
                         .padding(.leading)
                         
-//                        Image("IntroView_MainImage")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(width: 393, height: 352)
-//                            .padding(.bottom)
-                        LottieView(name: "Windy")
-                            .frame(width: 393, height: 352)
                         
                         HourlyForcastView(hourWeatherList: locationManager.hourlyWeatherData)
-                            .frame(height: 120)
+//                            .frame(height: 120)
                         
                         slideUpText
                     } else {
@@ -64,7 +57,7 @@ struct MainView: View {
                         Image("IntroView_MainImage")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 393, height: 352)
+                            .frame(width: proxy.size.width)
                             .padding(.bottom)
                         
 //                        HourlyForcastView(hourWeatherList: [])
@@ -73,6 +66,7 @@ struct MainView: View {
                     }
                     
                 }
+                .frame(width: proxy.size.width, height: proxy.size.height)
                 
                 if let weather = locationManager.weather {
                     // 10일후까지의 예보 뷰
