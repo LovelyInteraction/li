@@ -33,11 +33,13 @@ struct MainView: View {
                         }
                         .padding(.leading)
                         
-                        Image("IntroView_MainImage")
-                            .resizable()
-                            .scaledToFit()
+//                        Image("IntroView_MainImage")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 393, height: 352)
+//                            .padding(.bottom)
+                        LottieView(name: "Windy")
                             .frame(width: 393, height: 352)
-                            .padding(.bottom)
                         
                         HourlyForcastView(hourWeatherList: locationManager.hourlyWeatherData)
                             .frame(height: 120)
