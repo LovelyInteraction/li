@@ -23,6 +23,7 @@
 		6FB2E3DC2AB9DB4500884499 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E3DB2AB9DB4500884499 /* AppleSDGothicNeo.ttc */; };
 		6FB2E3DE2AB9DBD000884499 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2E3DD2AB9DBD000884499 /* FontManager.swift */; };
 		A924BC0E2ADCEDCD00D9FC62 /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924BC0D2ADCEDCD00D9FC62 /* LottieManager.swift */; };
+		A924BC112ADCEF3F00D9FC62 /* LIRainy.json in Resources */ = {isa = PBXBuildFile; fileRef = A924BC102ADCEF3F00D9FC62 /* LIRainy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		6FB2E3DD2AB9DBD000884499 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		6FB2E3E02AB9E97800884499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A924BC0D2ADCEDCD00D9FC62 /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		A924BC102ADCEF3F00D9FC62 /* LIRainy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LIRainy.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		6FB2E3D62AB9D63D00884499 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A924BC0F2ADCEE7A00D9FC62 /* Lotties */,
 				6FB2E3DF2AB9E45200884499 /* Fonts */,
 			);
 			path = Resource;
@@ -145,6 +148,14 @@
 				6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A924BC0F2ADCEE7A00D9FC62 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				A924BC102ADCEF3F00D9FC62 /* LIRainy.json */,
+			);
+			path = Lotties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A924BC112ADCEF3F00D9FC62 /* LIRainy.json in Resources */,
 				6F25015C2AA079EB00DA8E8F /* Preview Assets.xcassets in Resources */,
 				6FB2E3DA2AB9D9A600884499 /* SF-Pro.ttf in Resources */,
 				6FB2E3D82AB9D8B200884499 /* SF-Mono-Bold.otf in Resources */,

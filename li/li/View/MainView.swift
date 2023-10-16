@@ -33,12 +33,15 @@ struct MainView: View {
                         }
                         .padding(.leading)
                         
-                        Image("IntroView_MainImage")
-                            .resizable()
-                            .scaledToFit()
+                        Lottiefile(filename: "LIRainy", loopState: true, playState: false)
                             .frame(width: 393, height: 352)
-                            .padding(.bottom)
                         
+//                        Image("IntroView_MainImage")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 393, height: 352)
+//                            .padding(.bottom)
+//                        
                         HourlyForcastView(hourWeatherList: locationManager.hourlyWeatherData)
                             .frame(height: 120)
                         
