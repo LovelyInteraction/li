@@ -22,6 +22,7 @@
 		6FB2E3DA2AB9D9A600884499 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E3D92AB9D9A600884499 /* SF-Pro.ttf */; };
 		6FB2E3DC2AB9DB4500884499 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2E3DB2AB9DB4500884499 /* AppleSDGothicNeo.ttc */; };
 		6FB2E3DE2AB9DBD000884499 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2E3DD2AB9DBD000884499 /* FontManager.swift */; };
+		A924BC0E2ADCEDCD00D9FC62 /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924BC0D2ADCEDCD00D9FC62 /* LottieManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		6FB2E3DB2AB9DB4500884499 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		6FB2E3DD2AB9DBD000884499 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		6FB2E3E02AB9E97800884499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A924BC0D2ADCEDCD00D9FC62 /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				6F1762D82AA48598009D0040 /* LocationManager.swift */,
 				6F22E7352AAC4E33006A0528 /* HapticManager.swift */,
 				6FB2E3DD2AB9DBD000884499 /* FontManager.swift */,
+				A924BC0D2ADCEDCD00D9FC62 /* LottieManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				6F2501572AA079EA00DA8E8F /* ContentView.swift in Sources */,
 				6F84329B2AA77115000760AC /* HourlyForcastView.swift in Sources */,
 				6F1762D92AA48598009D0040 /* LocationManager.swift in Sources */,
+				A924BC0E2ADCEDCD00D9FC62 /* LottieManager.swift in Sources */,
 				6F1762DB2AA4F0FD009D0040 /* SevenDayForecastView.swift in Sources */,
 				6F1762D42AA47D00009D0040 /* MainView.swift in Sources */,
 				6F2501552AA079EA00DA8E8F /* liApp.swift in Sources */,
